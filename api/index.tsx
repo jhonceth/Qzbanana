@@ -1,4 +1,4 @@
-import { Button, Frog } from 'frog'
+import { Button, Frog, image } from 'frog'
 import { devtools } from 'frog/dev'
 import dappykit from '@dappykit/sdk'
 import { serveStatic } from 'frog/serve-static'
@@ -9,9 +9,8 @@ import quizData from '../quiz.json' assert { type: 'json' }
 import { Quiz } from './quiz/index.js'
 import { kvGetDelegatedAddress, kvPutMnemonic } from './utils/kv.js'
 import { dappySaveData } from './utils/dappykit.js'
-import { Image } from 'frog'
 
-// Configuración inicial de la aplicación
+
 const { ViemUtils, Utils } = dappykit
 const { generateMnemonic, privateKeyToAccount, english, mnemonicToAccount } = ViemUtils
 const { accountToSigner } = Utils.Signer
@@ -22,40 +21,13 @@ export const app = new Frog({
   ui: { vars },
 })
 
-// Manejador de imágenes
-app.image('/quiz-image', (c) => {
-  return c.res({
-    headers: {
-      'Cache-Control': 'max-age=0',
-    },
-    body: '<img src="https://i.imgur.com/wB2y51J.png" alt="Quiz Image"/>'
-  })
-})
-
-// Definir el frame principal
 app.frame('/', async c => {
   const { appTitle } = await configureApp(app, c, 'appAuthUrl')
 
   const intents = [<Button action="/next">⭐ Start</Button>]
 
   return c.res({
-    title: appTitle,
-    image: (
-      <Box grow alignVertical="center" backgroundColor="white" padding="32" border={BORDER_SIMPLE}>
-        <VStack gap="4">
-          {/* Aquí incluimos la imagen */}
-          <img src="/api/quiz-image" alt="Quiz Image" />
-          
-          <Heading color="h1Text" align="center" size="64">
-            Quiz time!
-          </Heading>
-
-          <Text align="center" size="18">
-            {quizData.shortDescription}
-          </Text>
-        </VStack>
-      </Box>
-    ),
+    image: 'https://i.imgur.com/wB2y51J.png',
     intents,
   })
 })
