@@ -24,7 +24,7 @@ export const app = new Frog({
 app.frame('/', async c => {
   const { appTitle } = await configureApp(app, c, 'appAuthUrl')
 
-  const intents = [<Button action="/next">⭐ Start</Button>]
+  const intents = [<Button action="/next">🍌Start🍌</Button>]
 
   return c.res({
     image: 'https://i.imgur.com/wB2y51J.png',
@@ -40,7 +40,7 @@ app.frame('/next', async c => {
   const quiz = new Quiz(quizData, questionIndex, points)
   const isLastQuestion = questionIndex >= quiz.questions.length - 1
   const action = isLastQuestion ? '/result' : '/next'
-  const message = encodeURIComponent(`🚀 Check out the Quiz!`)
+  const message = encodeURIComponent(`🍌 Test your knowledge about banana! Create by @jhonc.eth`)
   const buttonUrl = `https://warpcast.com/~/compose?text=${message}&embeds[]=${appShareUrl}`
 
   const answers = quiz.questions[questionIndex].answers.map((item, index) => ({
@@ -59,13 +59,13 @@ app.frame('/next', async c => {
         </Button>
       )
     }),
-    <Button.Link href={buttonUrl}>🔗 Share</Button.Link>,
+    <Button.Link href={buttonUrl}>🔗 Share🍌</Button.Link>,
   ])
 
   return c.res({
     title: appTitle,
     image: (
-      <Box grow alignVertical="center" backgroundColor="white" padding="32" border={BORDER_SIMPLE}>
+      <Box grow alignVertical="center" backgroundColor="yellow" padding="32" border={BORDER_SIMPLE}>
         <VStack gap="4">
           <Heading color="h1Text" align="center" size="64">
             {quiz.questions[questionIndex].question}
@@ -96,7 +96,7 @@ app.frame('/result', async c => {
     intents.push(<Button action={userDelegatedAddress ? '/answers' : '/authorize'}>🙋 Answers</Button>)
   }
 
-  intents.push(<Button.Link href="https://hack.dappykit.org/?source=quiz-template">🔴 Win Tokens</Button.Link>)
+  intents.push(<Button.Link href="https://warpcast.com/~/channel/banana">🍌 Ch Banana</Button.Link>)
 
   return c.res({
     title: appTitle,
@@ -182,7 +182,7 @@ app.frame('/authorize', async c => {
 
       text = `⚠️To view the answers, click "Authorize" and enter the number ${response?.answer}.`
       intents = [
-        <Button.Link href={appAuthUrl}>🐙 Authorize</Button.Link>,
+        <Button.Link href={appAuthUrl}>🍌 Authorize</Button.Link>,
         <Button value="check-status" action="/authorize">
           🔁 Check Status
         </Button>,
