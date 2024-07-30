@@ -1,0 +1,105 @@
+{
+  "shortDescription": "Test your knowledge of bananas with this quiz.",
+  "questions": [
+    {
+      "question": "What color are ripe bananas?",
+      "answers": ["Green", "Yellow", "Red"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "question": "Which vitamin is abundant in bananas?",
+      "answers": ["B6", "C", "D"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "question": "Which mineral is abundant in bananas?",
+      "answers": ["Iron", "Zinc", "Potassium"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "question": "What shape are bananas?",
+      "answers": ["Round", "Oval", "Crescent"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "question": "What type of fruit is a banana?",
+      "answers": ["Berry", "Citrus", "Stone"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "question": "What part of the banana plant is eaten?",
+      "answers": ["Root", "Stem", "Fruit"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "question": "Where are bananas native to?",
+      "answers": ["Africa", "Asia", "Europe"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "question": "Which part of the world consumes the most bananas?",
+      "answers": ["USA", "Asia", "Africa"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "question": "Which animal is famously known to eat bananas?",
+      "answers": ["Elephant", "Monkey", "Dog"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "question": "How are bananas grown?",
+      "answers": ["Trees", "Bushes", "Herbs"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "question": "What is the average calorie content of a banana?",
+      "answers": ["50", "90", "200"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "question": "What is the largest producer of bananas?",
+      "answers": ["India", "China", "Brazil"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "question": "Which component gives bananas their yellow color?",
+      "answers": ["Chlorophyll", "Carotenoids", "Flavonoids"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "question": "Which type of banana is most common?",
+      "answers": ["Red", "Blue", "Cavendish"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "question": "What is the main carbohydrate in bananas?",
+      "answers": ["Fructose", "Glucose", "Starch"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "question": "What happens to bananas when they ripen?",
+      "answers": ["Harden", "Sweeten", "Sour"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "question": "Which condition do bananas help alleviate?",
+      "answers": ["Cold", "Fever", "Cramps"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "question": "How long is the average banana?",
+      "answers": ["4in", "7in", "10in"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "question": "Which vitamin is less common in bananas?",
+      "answers": ["A", "B6", "C"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "question": "How many varieties of bananas exist?",
+      "answers": ["5", "50", "1000"],
+      "correctAnswerIndex": 2
+    }
+  ]
+}
